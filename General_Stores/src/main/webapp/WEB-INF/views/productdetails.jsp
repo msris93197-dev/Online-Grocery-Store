@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Product </title>
+    <title>Pantrix | Product </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css" type="text/css" media="screen" />
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
@@ -62,8 +62,8 @@
                 </div>
 
                 <div class="col-lg-7 single-right-left simpleCart_shelfItem">
-                    <span class="eyebrow">Everyday essentials</span><h3 class="mb-3">${product.name}</h3>
-<c:if test="${product.mrpPrice > 0 and product.mrpPrice > product.price}"><span class="badge badge-warning mb-3"><fmt:formatNumber value="${(product.mrpPrice - product.price) * 100 / product.mrpPrice}" maxFractionDigits="0" />% off MRP</span></c:if>
+                    <span class="eyebrow">Everyday pantry essentials</span><h3 class="mb-3">${product.name}</h3>
+<c:if test="${product.mrpPrice > 0 and product.mrpPrice > product.price}"><span class="badge badge-deal mb-3"><fmt:formatNumber value="${(product.mrpPrice - product.price) * 100 / product.mrpPrice}" maxFractionDigits="0" />% off MRP</span></c:if>
                     <p class="mb-3">
                         <span class="item_price">&#x20b9;<fmt:formatNumber value="${product.price}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></span>
                         <del>&#x20b9;<fmt:formatNumber value="${product.mrpPrice}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></del>

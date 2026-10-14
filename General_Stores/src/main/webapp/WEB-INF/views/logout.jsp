@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Logout </title>
+    <title>Pantrix | Logout </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <script src="${pageContext.request.contextPath}/js/backNoWork.js"></script>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />

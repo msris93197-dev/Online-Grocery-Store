@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <link rel='icon' href='/images/favicon.ico' type='image/x-icon'/>
-    <meta name="keywords" content="Grocket, Grocket, General Store, Gokuldham Society, Grocket Thane, Shop no.4, Grocery Shop" />
+    <meta name="keywords" content="Pantrix, Pantrix, General Store, Gokuldham Society, Pantrix Thane, Shop no.4, Grocery Shop" />
     <script>
 // 	console.log("clearing html storage.");
     localStorage.clear();

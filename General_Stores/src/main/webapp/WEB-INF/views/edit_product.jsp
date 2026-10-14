@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Edit Product </title>
+    <title>Pantrix | Edit Product </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>

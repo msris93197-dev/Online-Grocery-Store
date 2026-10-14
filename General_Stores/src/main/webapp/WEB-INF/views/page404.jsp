@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Page 404 </title>
+    <title>Pantrix | Page 404 </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>

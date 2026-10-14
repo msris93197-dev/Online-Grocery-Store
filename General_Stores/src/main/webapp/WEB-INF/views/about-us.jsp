@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | About </title>
+    <title>Pantrix | About </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
@@ -49,12 +49,12 @@
             <div class="row">
                 <div class="col-lg-6 welcome-left">
                     <h3>About Store</h3>
-                    <h4 class="my-sm-3 my-2">Grocket is a low-price online Grocery store, which has many vital ranging products consumed in our everyday Breakfast, Meals & Dinners. We have Fresh Vegetables, Staples, Beverages, Personal care products & many other products needed daily. All the products on our
+                    <h4 class="my-sm-3 my-2">Pantrix is a low-price online Grocery store, which has many vital ranging products consumed in our everyday Breakfast, Meals & Dinners. We have Fresh Vegetables, Staples, Beverages, Personal care products & many other products needed daily. All the products on our
                      website are distinguished based on their categories, which gives you the hassle-free shopping experience ever with minimum time spent for your shopping.</h4>
                 </div>
 
                 <div class="col-lg-6 welcome-right-top mt-lg-0 mt-sm-5 mt-4">
-                    <img src="${pageContext.request.contextPath}/images/store.png" class="img-about" alt="Grocket">
+                    <img src="${pageContext.request.contextPath}/images/store.png" class="img-about" alt="Pantrix">
                 </div>
                 <div class="welcome-left">
                     <br><br><h3 class="text-left" style="color:var(--primary);">&ensp;What We Do</h3>

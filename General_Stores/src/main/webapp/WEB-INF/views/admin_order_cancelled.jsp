@@ -8,7 +8,7 @@
 <c:if test="${empty aemail}">
     <c:redirect url="${pageContext.request.contextPath}/user/sign-in"/>
 </c:if>
-    <title>Grocket | Cancelled Orders </title>
+    <title>Pantrix | Cancelled Orders </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 <style type="text/css">
@@ -108,7 +108,7 @@ table {
           <br>${orders.product.name}</div></td>
                               <td data-label="Qty."><div class="cell-value">${orders.quantity}</div></td>
                             <td data-label="Total Amount (&#x20b9;)"><div class="cell-value"><fmt:formatNumber value="${orders.amount}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></div></td>
-                            <td data-label="Status"><div class="cell-value"><span class="badge badge-info">${orders.orderStatus}</span></div></td>
+                            <td data-label="Status"><div class="cell-value"><span class="badge badge-danger">${orders.orderStatus}</span></div></td>
                             <td data-label="Date"><div class="cell-value"><fmt:formatDate pattern="dd-MMM-yyyy hh:mm:ss" value="${orders.order.orderDate}" /></div></td>
                             <td data-label="Action"><div class="cell-value">
                         <a href="${pageContext.request.contextPath}/admin/order/changeStatus/Delivered/${orders.id}" class="btn btn-success" onclick="return confirm('Change Order Status to Delivered?');">Deliver</a>

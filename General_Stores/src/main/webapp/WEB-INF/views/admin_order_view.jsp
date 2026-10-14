@@ -8,7 +8,7 @@
 <c:if test="${empty aemail}">
     <c:redirect url="${pageContext.request.contextPath}/user/sign-in"/>
 </c:if>
-    <title>Grocket | All Orders </title>
+    <title>Pantrix | All Orders </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 <style type="text/css">
@@ -123,7 +123,7 @@ table {
               <span class="badge badge-success">${orders.orderStatus}</span>
               </c:if>
               <c:if test="${orders.orderStatus eq 'Cancelled'}">
-              <span class="badge badge-info">${orders.orderStatus}</span>
+              <span class="badge badge-danger">${orders.orderStatus}</span>
               </c:if>
           </div></td>
         <td data-label="Date"><div class="cell-value"><fmt:formatDate pattern="dd-MMM-yyyy hh:mm" value="${orders.order.orderDate}" /></div></td>

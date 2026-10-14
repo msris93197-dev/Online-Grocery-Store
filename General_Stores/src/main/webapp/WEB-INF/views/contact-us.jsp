@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Contact </title>
+    <title>Pantrix | Contact </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <style type="text/css">
 
@@ -58,7 +58,7 @@
                             <i class="fas fa-map-marker-alt rounded-circle"></i>
                         </div>
                         <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Address</h4>
-                        <p style="font-weight: bold;color:var(--ink);">Grocket
+                        <p style="font-weight: bold;color:var(--ink);">Pantrix
                             <label style="font-weight: bold;color:var(--ink);">Shop No.4 Building No.51/B Gokuldham Society Goregaon(E), 400000</label>
                         </p>
                     </div>
@@ -135,8 +135,8 @@
             </form>
             <!-- //form -->
             <br>
-                    <center><div id="success" style="color: green;font-weight: bold;font-size: 15px;"></div></center>
-                    <center><div id="error" style="color: green;font-weight: bold;font-size: 15px;"></div></center>
+                    <center><div id="success" style="color:var(--success);font-weight: bold;font-size: 15px;"></div></center>
+                    <center><div id="error" style="color:var(--danger);font-weight: bold;font-size: 15px;"></div></center>
   <center>
   <img src="${pageContext.request.contextPath}/images/loader.gif" alt="loader" style="width: 150px;height: 120px;" id="loader">
   </center>

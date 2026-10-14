@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Change Password </title>
+    <title>Pantrix | Change Password </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
@@ -60,7 +60,7 @@
                                     </div>
                             </c:if>
     <div class="container h-100">
-        <div class="auth-heading"><span class="eyebrow">Grocket account</span><h2>Choose a new password</h2><p>Use at least 6 characters to protect your account.</p></div>
+        <div class="auth-heading"><span class="eyebrow">Pantrix account</span><h2>Choose a new password</h2><p>Use at least 6 characters to protect your account.</p></div>
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">

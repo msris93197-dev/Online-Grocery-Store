@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Register </title>
+    <title>Pantrix | Register </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
@@ -36,7 +36,7 @@
 <!-- register -->
     <div class="contact py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
-<div class="auth-heading"><span class="eyebrow">Join Grocket</span><h2>Create your account</h2><p>A simpler way to shop your everyday essentials.</p></div>
+<div class="auth-heading"><span class="eyebrow">Join Pantrix</span><h2>Create your account</h2><p>A simpler way to shop your everyday essentials.</p></div>
         <c:if test="${not empty test}">
             <div class="alert alert-success alert-dismissible fade show">
                 Profile Updated Successfully.

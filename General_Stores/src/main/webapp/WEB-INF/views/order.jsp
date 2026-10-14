@@ -8,7 +8,7 @@
 <c:if test="${empty email}">
     <c:redirect url="${pageContext.request.contextPath}/user/sign-in"/>
 </c:if>
-    <title>Grocket | Order confirmation</title>
+    <title>Pantrix | Order confirmation</title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>

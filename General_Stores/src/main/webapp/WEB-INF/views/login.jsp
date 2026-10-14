@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Login </title>
+    <title>Pantrix | Login </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
@@ -34,7 +34,7 @@
 <!-- log in -->
     <br>
     <div class="container h-100">
-        <div class="auth-heading"><span class="eyebrow">Grocket account</span><h2>Welcome back</h2><p>Sign in to shop your everyday essentials.</p></div>
+        <div class="auth-heading"><span class="eyebrow">Pantrix account</span><h2>Welcome back</h2><p>Sign in to shop your everyday essentials.</p></div>
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">

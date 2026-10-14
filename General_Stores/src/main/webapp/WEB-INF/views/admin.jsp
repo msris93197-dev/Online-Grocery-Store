@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocket | Login </title>
+    <title>Pantrix | Login </title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
@@ -15,7 +15,7 @@
 <!-- log in -->
     <br><br>
     <div class="container h-100">
-        <div class="auth-heading"><span class="eyebrow">Grocket admin</span><h2>Store administration</h2><p>Sign in to manage products and orders.</p></div>
+        <div class="auth-heading"><span class="eyebrow">Pantrix admin</span><h2>Store administration</h2><p>Sign in to manage products and orders.</p></div>
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">

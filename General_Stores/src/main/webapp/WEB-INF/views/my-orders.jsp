@@ -8,7 +8,7 @@
 <c:if test="${empty email}">
     <c:redirect url="${pageContext.request.contextPath}/user/sign-in"/>
 </c:if>
-    <title>Grocket | My Orders</title>
+    <title>Pantrix | My Orders</title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
@@ -80,7 +80,7 @@
               <span class="badge badge-success">${orders.orderStatus}</span>
               </c:if>
               <c:if test="${orders.orderStatus eq 'Cancelled'}">
-              <span class="badge badge-info">${orders.orderStatus}</span>
+              <span class="badge badge-danger">${orders.orderStatus}</span>
               </c:if>
           </div></td>
 <!--           <td data-label="Action"><div class="cell-value"> -->

@@ -59,7 +59,7 @@
  }
 
  .cd-dropdown-content a:hover {
-   color: #00c4da;
+   color: var(--accent);
  }
 
  ul.is-hidden li {
@@ -83,7 +83,7 @@
      text-decoration: none;
    }
    .no-touch .cd-dropdown-trigger.dropdown-is-active:hover {
-     background-color: #47975f;
+     background-color: var(--brand-hover);
    }
    .cd-dropdown-trigger.dropdown-is-active::before,
    .cd-dropdown-trigger.dropdown-is-active::after {
@@ -474,7 +474,7 @@
 
  .cd-dropdown-content .see-all a {
    /* different style for the See all links */
-   color: #3f8654;
+   color: var(--brand);
  }
 
  .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item,
@@ -592,7 +592,7 @@
      border-bottom: none;
    }
    .no-touch .cd-dropdown-content>li:not(.has-children) a:hover {
-     color: #3f8654;
+     color: var(--brand);
    }
    .cd-dropdown-content.move-out>li>a,
    .cd-dropdown-content.move-out>li>.cd-search,
@@ -724,7 +724,7 @@
      display: none;
    }
    .cd-dropdown-content .cd-secondary-dropdown>li>a {
-     color: #3f8654;
+     color: var(--brand);
      font-size: 1.6rem;
      text-transform: uppercase;
      color: #555;
@@ -774,7 +774,7 @@
      padding-left: 0;
    }
    .no-touch .cd-dropdown-content .cd-secondary-dropdown a:hover {
-     color: #3f8654;
+     color: var(--brand);
    }
    .cd-dropdown-content .cd-secondary-dropdown ul {
      overflow: hidden;
@@ -813,7 +813,7 @@
      padding: 0;
      height: auto;
      line-height: normal;
-     color: #3f8654;
+     color: var(--brand);
      margin-bottom: 2em;
    }
    .cd-dropdown-content .cd-dropdown-gallery>li:nth-last-of-type(2) a,
@@ -838,7 +838,7 @@
      background: #ebebeb;
    }
    .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
-     color: #3f8654;
+     color: var(--brand);
      font-weight: bold;
    }
    .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p {
@@ -861,15 +861,15 @@
    }
    .cd-dropdown-content>.has-children>a.is-active {
      /* hover effect for .cd-dropdown-content items with subnavigation */
-     border-left: 2px solid #00c4da;
-     color: #00c4da;
+     border-left: 2px solid var(--accent);
+     color: var(--accent);
    }
    .cd-dropdown-content>.has-children>a.is-active::before,
    .cd-dropdown-content>.has-children>a.is-active::after {
-     background: #00c4da;
+     background: var(--accent);
    }
    .open-to-left .cd-dropdown-content>.has-children>a.is-active {
-     box-shadow: inset -2px 0 0 #00c4da;
+     box-shadow: inset -2px 0 0 var(--accent);
    }
  }
 

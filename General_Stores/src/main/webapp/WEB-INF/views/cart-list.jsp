@@ -9,7 +9,7 @@
 <c:if test="${empty email}">
     <c:redirect url="${pageContext.request.contextPath}/user/sign-in"/>
 </c:if>
-    <title>Grocket | My Cart</title>
+    <title>Pantrix | My Cart</title>
     <jsp:include page="layouts/header.jsp"></jsp:include>
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style type="text/css">
@@ -193,7 +193,7 @@
                                     <label class="col-form-label" for="field-paymentMode"><b>Select Payment Mode</b></label>
                                         <select id="field-paymentMode" class="option-w3ls" name="paymentMode" required="required">
                                             <option>COD</option>
-                                            <option selected="selected">Grocket Wallet</option>
+                                            <option selected="selected" value="Grocket Wallet">Pantrix Wallet</option>
                                             <option disabled="disabled">Debit Card</option>
                                             <option disabled="disabled">Online Banking</option>
                                             <option disabled="disabled">UPI Id</option>

@@ -5,7 +5,7 @@
             <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-light bg-light">
             <h1 class="text-left mr-12">
                 <a href="${pageContext.request.contextPath}/admin/home" class="font-weight-bold font-italic" style="font-size: 22px;color:var(--primary);">
-                    Grocket <small class="admin-label">Admin</small>
+                    Pantrix <small class="admin-label">Admin</small>
                 </a>
             </h1>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

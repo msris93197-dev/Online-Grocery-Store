@@ -1,8 +1,8 @@
 <footer class="store-footer"><div class="container footer-inner">
-  <div><div class="footer-brand">Grocket</div><p>Your neighbourhood store, now at your fingertips.</p></div>
-  <div class="footer-values"><span><i class="fas fa-leaf" aria-hidden="true"></i>Everyday essentials</span><span><i class="fas fa-shopping-basket" aria-hidden="true"></i>Easy shopping</span><span><i class="far fa-thumbs-up" aria-hidden="true"></i>Great value</span></div>
+  <div><div class="footer-brand">Pantrix</div><p>Your pantry, delivered.</p></div>
+  <div class="footer-values"><span><i class="fas fa-leaf" aria-hidden="true"></i>Everyday pantry essentials</span><span><i class="fas fa-shopping-basket" aria-hidden="true"></i>Easy shopping</span><span><i class="far fa-thumbs-up" aria-hidden="true"></i>Great value</span></div>
 </div></footer>
-<div class="copy-right py-3"><div class="container"><p class="text-center">&copy; Grocket. All rights reserved.</p></div></div>
+<div class="copy-right py-3"><div class="container"><p class="text-center">&copy; Pantrix. All rights reserved.</p></div></div>
 <script src="${pageContext.request.contextPath}/js/jquery-2.2.3.min.js"></script>
     <!-- nav smooth scroll -->
     <script>
