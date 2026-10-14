@@ -110,8 +110,6 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `address`, `added_date`, `email`, `gender`, `name`, `password`, `phone`, `valid`, `wallet money`,`pin_code`) VALUES
-(1, 'Ram Nagar,Vrindavan Society, Mumbai', '2020-05-10 11:11:01', 'dharmeshmourya043@gmail.com', 'Male', 'Dharmesh', '$2a$10$QQeMRbMjnXys3cDIvvozH.dpxxCLD9d0b5Pz092djiwkSLW1YJ/Vy', '1223334560', b'1', '400330');
 
 -- --------------------------------------------------------
 
