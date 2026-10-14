@@ -2,7 +2,8 @@
 
 A full-stack e-commerce web application for a neighbourhood grocery store, built with **Spring Boot**, **Spring Data JPA** and **MySQL**, with server-rendered **JSP** pages.
 
-**Live demo:** _coming soon_
+**Live demo:** https://online-grocery-store-6ove.onrender.com
+_(hosted on a free plan — the first load can take up to a minute while the server wakes up)_
 
 ## Features
 
