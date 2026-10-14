@@ -51,7 +51,7 @@ a.play-icon.popup-with-zoom-anim img:hover {
 .portfolio-items h4 {
   margin: 1em 0;
   font-size: 25px;
-  color: #a63d56;
+  color: var(--primary);
 }
 
 .portfolio-items p {
@@ -315,7 +315,7 @@ button::-moz-focus-inner {
 .login h3,
 .select-city h3 {
   margin: 20px;
-  color: #F45C5D;
+  color: var(--primary);
   font-size: 25px;
   letter-spacing: 1px;
 }
@@ -362,7 +362,7 @@ button::-moz-focus-inner {
   width: 90%;
   padding: 5px;
   margin: 3px 0;
-  x border: 1px solid #a63d56;
+  x border: 1px solid var(--primary);
   outline: none !important;
 }
 

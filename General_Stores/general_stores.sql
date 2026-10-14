@@ -102,7 +102,6 @@ CREATE TABLE `customer` (
   `password` varchar(60) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `valid` bit(1) NOT NULL,
-  `wallet money` varchar(10) NOT NULL,
   `pin_code` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

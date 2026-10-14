@@ -73,7 +73,7 @@ label {
 /*-- top-header --*/
 
 .main-top-w3l {
-    background: #0879c9;
+    background: var(--primary);
 }
 
 .header-most-top p {
@@ -102,7 +102,7 @@ label {
 
 .modal-title {
     font-size: 30px;
-    color: #0879c9;
+    color: var(--primary);
 }
 
 .modal-content {
@@ -116,7 +116,7 @@ label.col-form-label {
 }
 
 p.dont-do a {
-    color: #F45C5D;
+    color: var(--primary);
 }
 
 .modal-footer .btn-primary,
@@ -149,7 +149,7 @@ p.dont-do a {
     cursor: pointer;
     letter-spacing: 1px;
     padding: 10px 0;
-    background: #0879c9;
+    background: var(--primary);
     color: #fff;
     margin: 2vw 0 1.5vw;
     -webkit-transition: 0.5s all;
@@ -200,7 +200,7 @@ input[type="submit"] {
 
 .agileits_search button {
     border-radius: 0;
-    background: #F45C5D;
+    background: var(--primary);
     color: #fff;
     width: 20%;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.22);
@@ -212,7 +212,7 @@ input[type="submit"] {
 /*-- logo --*/
 
 .logo_agile h1 a {
-    color: #F45C5D;
+    color: var(--primary);
     font-size: 38px;
     text-decoration: none;
     letter-spacing: 1px;
@@ -265,7 +265,7 @@ button.w3view-cart {
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-    color: #F45C5D;
+    color: var(--primary);
 }
 
 /*-- navigation-dropdown --*/
@@ -287,13 +287,13 @@ ul.multi-column-dropdown li a {
 }
 
 ul.multi-column-dropdown li a:hover {
-    color: #F45C5D;
+    color: var(--primary);
 }
 
 .dropdown-menu>.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus {
-    background-color: #F45C5D;
+    background-color: var(--primary);
 }
 
 .dropdown-item {
@@ -302,7 +302,7 @@ ul.multi-column-dropdown li a:hover {
 
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: #0879c9;
+    background-color: var(--primary);
 }
 
 /*-- //navigation-dropdown --*/
@@ -380,7 +380,7 @@ ul.multi-column-dropdown li a:hover {
 .carousel-caption h2 span,
 .carousel-caption h3 span {
     font-weight: 800;
-    color: #F45C5D;
+    color: var(--primary);
 }
 
 .carousel-caption p {
@@ -410,7 +410,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2 {
     display: inline-block;
-    background: #0879c9;
+    background: var(--primary);
     border-radius: 4px;
     color: #fff;
     letter-spacing: 2px;
@@ -419,7 +419,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2:hover,
 .button2:focus {
-    background: #F45C5D;
+    background: var(--primary);
     color: #fff;
 }
 
@@ -439,7 +439,7 @@ h3.tittle-w3l {
 }
 
 h3.tittle-w3l span {
-    color: #0879c9;
+    color: var(--primary);
     font-size: 50px;
     letter-spacing: 0;
 }
@@ -460,7 +460,7 @@ h3.tittle-w3l span {
 .snipcart-details input.button {
     font-size: 13px;
     color: #fff;
-    background: #0879c9;
+    background: var(--primary);
     text-decoration: none;
     border: none;
     border-radius: 0;
@@ -490,7 +490,7 @@ h3.tittle-w3l span {
     outline: none;
     text-transform: capitalize;
     padding: .5em 2.5em .5em 1em;
-    border: 1px solid #fe9126;
+    border: 1px solid var(--accent);
     margin: .35em 0 0;
     background: url(../images/cart.png) no-repeat 116px 9px;
 }
@@ -522,15 +522,15 @@ h3.tittle-w3l span {
 }
 
 #PPminicarts .minicarts-remove {
-    background: #3399cc !important;
-    border: 1px solid #3399cc !important;
+    background: var(--primary) !important;
+    border: 1px solid var(--primary) !important;
     opacity: 1 !important;
     outline: none;
 }
 
 #PPminicarts .minicarts-submit {
     color: #fff !important;
-    background: #0879c9 !important;
+    background: var(--primary) !important;
     padding: 0 10px !important;
     font-size: 15px;
     letter-spacing: 1px;
@@ -542,7 +542,7 @@ h3.tittle-w3l span {
     transition: 0.5s all;
     bottom: -25px !important;
     right: 0 !important;
-    border: 1px solid #0879c9 !important;
+    border: 1px solid var(--primary) !important;
     border-radius: 0px !important;
     text-shadow: none !important;
 }
@@ -599,15 +599,15 @@ h3.tittle-w3l span {
 }
 
 .product-men:nth-child(3) .product-new-top {
-    background: #FFC107;
+    background: var(--accent);
 }
 
 .product-men:nth-child(4) .product-new-top {
-    background: #219ff3;
+    background: var(--primary);
 }
 
 .product-new-top {
-    background: #ff2978;
+    background: var(--primary);
     color: #fff;
     position: absolute;
     top: 0;
@@ -686,7 +686,7 @@ h3.tittle-w3l span {
 }
 
 .inner-men-cart-pro ul li a:hover {
-    background: #ffc229 none repeat scroll 0 0;
+    background: var(--accent) none repeat scroll 0 0;
 }
 
 .inner-men-cart-pro .link-product-add-cart {
@@ -825,7 +825,7 @@ h3.tittle-w3l span {
 }
 
 .search-hotel form input[type="submit"] {
-    background: url(../images/search.png) no-repeat 13px 11px #0879c9;
+    background: url(../images/search.png) no-repeat 13px 11px var(--primary);
     width: 44px;
     height: 39px;
     border: none;
@@ -843,7 +843,7 @@ h3.tittle-w3l span {
 }
 
 h3.agileits-sear-head {
-    color: #F45C5D;
+    color: var(--primary);
     font-size: 21px;
 }
 
@@ -891,7 +891,7 @@ input.checked {
 /*-- customer --*/
 
 .customer-rev ul li i {
-    color: #FFC107;
+    color: var(--accent);
 }
 
 .customer-rev ul li {
@@ -910,12 +910,12 @@ input.checked {
 /*-- best seller (scroll) --*/
 
 .f-grid a {
-    color: #0879c9;
+    color: var(--primary);
     font-size: 15px;
 }
 
 a.price-mar {
-    color: #ef0e0e;
+    color: var(--danger);
     display: block;
 }
 /*-- scroll --*/
@@ -956,7 +956,7 @@ h3.heading-tittle {
 
 span.item_price {
     font-size: 18px;
-    color: #d60404;
+    color: var(--danger);
 }
 
 .info-product-price del {
@@ -966,7 +966,7 @@ span.item_price {
 }
 
 .product-sec1.product-sec2 {
-    background: #F45C5D;
+    background: var(--primary);
     position: relative;
 }
 
@@ -991,7 +991,7 @@ p.w3l-nut-middle {
 }
 
 .agile_inner_drop_nav_info.p-4 h5 {
-    color: #0879c9;
+    color: var(--primary);
     letter-spacing: 1px;
 }
 
@@ -1038,7 +1038,7 @@ p.w3l-nut-middle {
 }
 
 .offer-name h6 {
-    color: #F44336;
+    color: var(--danger);
     font-size: 18px;
 }
 
@@ -1067,7 +1067,7 @@ h2.footer-top-head-w3l {
 .icon-fot i {
     font-size: 41px;
     line-height: 1.4;
-    color: #0879c9;
+    color: var(--primary);
 }
 
 .text-form-footer {
@@ -1103,7 +1103,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li a:hover {
-    color: #F45C5D;
+    color: var(--primary);
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     -o-transition: .5s all;
@@ -1112,7 +1112,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li i {
-    color: #f45c5d;
+    color: var(--primary);
     padding-right: 10px;
 }
 
@@ -1153,31 +1153,31 @@ h2.footer-top-head-w3l {
 }
 
 .social .fb {
-    background: #6788ce;
+    background: var(--primary);
 }
 
 .social .tw {
-    background: #00ACEE;
+    background: var(--primary);
 }
 
 .social .gp {
-    background: #DD4B39;
+    background: var(--danger);
 }
 
 .social .pin {
-    background: #fe4445;
+    background: var(--danger);
 }
 
 .social .db {
-    background: #f85993;
+    background: var(--primary);
 }
 
 .social .rss {
-    background: #ff9845;
+    background: var(--accent);
 }
 
 .social .lin {
-    background: #3a9bdc;
+    background: var(--primary);
 }
 
 .social ul li a i {
@@ -1210,7 +1210,7 @@ h2.footer-top-head-w3l {
     padding: 10px;
     letter-spacing: 1px;
     width: 18%;
-    background: #f45c5d;
+    background: var(--primary);
     border: none;
 	cursor: pointer;
     -webkit-transition: 0.5s all;
@@ -1221,7 +1221,7 @@ h2.footer-top-head-w3l {
 }
 
 .w3l-agileits input[type="submit"]:hover {
-    background: #0879c9;
+    background: var(--primary);
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -1260,7 +1260,7 @@ h2.footer-top-head-w3l {
 /*-- copyright --*/
 
 .copy-right {
-    background: #0879c9;
+    background: var(--primary);
 }
 
 .copy-right p {
@@ -1342,7 +1342,7 @@ ul.w3_short li {
 }
 
 ul.w3_short li a {
-    color: #F45C5D;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -1366,7 +1366,7 @@ ul.w3_short {
 /*-- faq-page --*/
 
 h3.w3-head {
-    color: #f45c5d;
+    color: var(--primary);
     font-size: 28px;
     letter-spacing: 1px;
 }
@@ -1403,7 +1403,7 @@ li.subitem1 p {
     width: 90%;
     border: none;
     padding: 16px;
-    border-bottom: solid 1px #0879c9;
+    border-bottom: solid 1px var(--primary);
     height: 150px;
     outline: none;
     resize: none;
@@ -1412,7 +1412,7 @@ li.subitem1 p {
 .wthree-help form input[type="submit"] {
     font-size: 16px;
     color: #fff;
-    background: #F45C5D;
+    background: var(--primary);
     outline: none;
     border: none;
     cursor: pointer;
@@ -1425,7 +1425,7 @@ li.subitem1 p {
 }
 
 .wthree-help form input[type="submit"]:hover {
-    background: #0879c9;
+    background: var(--primary);
     -webkit-transform: translateY(8px);
     -ms-transform: translateY(8px);
     -o-transform: translateY(8px);
@@ -1441,7 +1441,7 @@ li.subitem1 p {
 .wthree-help a {
     color: #fff;
     padding: 10px 20px;
-    background: #0879c9;
+    background: var(--primary);
 }
 
 /*-- //help page --*/
@@ -1498,11 +1498,11 @@ li.subitem1 p {
 }
 
 .product-single-w3l {
-    border-top: 1px solid #0879c9;
+    border-top: 1px solid var(--primary);
 }
 
 .product-single-w3l p i {
-    color: #0879c9;
+    color: var(--primary);
     font-size: 24px;
 }
 
@@ -1527,7 +1527,7 @@ li.subitem1 p {
 /*-- checkout --*/
 
 .checkout-right h4 {
-    color: #F45C5D;
+    color: var(--primary);
     font-size: 26px;
     letter-spacing: 1px;
 }
@@ -1657,7 +1657,7 @@ td.invert-image a img {
 /*-- checkout form --*/
 
 .address_form_agile h4 {
-    color: #0879c9;
+    color: var(--primary);
     font-size: 24px;
     letter-spacing: 1px;
 }
@@ -1671,7 +1671,7 @@ td.invert-image a img {
     margin-bottom: 20px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #F45C5D;
+    border-bottom: 1px solid var(--primary);
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
@@ -1680,7 +1680,7 @@ td.invert-image a img {
 button.submit.check_out {
     padding: 12px 25px;
     letter-spacing: 1px;
-    background: #0879c9;
+    background: var(--primary);
     font-size: 16px;
     color: #fff;
     border: none;
@@ -1693,7 +1693,7 @@ button.submit.check_out {
 }
 
 button.submit.check_out:hover {
-    background: #F45C5D;
+    background: var(--primary);
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1720,7 +1720,7 @@ button.submit.check_out:hover {
 }
 
 .checkout-right-basket a:hover {
-    background: #F45C5D;
+    background: var(--primary);
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1730,7 +1730,7 @@ button.submit.check_out:hover {
 
 .checkout-right-basket a span {
     margin-left: 7px;
-    color: #0879c9;
+    color: var(--primary);
     font-size: 20px;
 }
 
@@ -1755,7 +1755,7 @@ button.submit.check_out:hover {
 .agileits_w3layouts_tab2 input[type="email"]:focus,
 .agileits_w3layouts_tab2 input[type="password"]:focus,
 .creditly-wrapper .form-control:focus {
-    border-color: #66afe9;
+    border-color: var(--primary);
     outline: 0;
 } */
 
@@ -1764,10 +1764,10 @@ button.submit.check_out:hover {
     position: relative;
     padding: 6px 50px 11px;
     letter-spacing: 3px;
-    background: #0879c9;
+    background: var(--primary);
     font-size: 1.5em;
     color: #fff;
-    border: 1px solid #0879c9;
+    border: 1px solid var(--primary);
     outline: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -1819,7 +1819,7 @@ button.submit.check_out:hover {
 
 .agile_amount {
     padding: 1em 2em;
-    background: #f71926;
+    background: var(--danger);
 }
 
 .agile_amount h3 {
@@ -1835,7 +1835,7 @@ button.submit.check_out:hover {
 
 .agile_amount p {
     font-size: 1em;
-    color: #1adeed;
+    color: var(--primary);
     line-height: 1.8em;
 }
 
@@ -1852,14 +1852,14 @@ img.pp-img {
 }
 
 a.btn.btn-primary {
-    background-color: #3a5795;
+    background-color: var(--primary);
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     border: none;
 }
 
 .vertical_post h5 {
-    color: #F45C5D;
+    color: var(--primary);
     font-size: 20px;
     margin: 0 0 18px 0;
     letter-spacing: 1px;
@@ -1938,7 +1938,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"],
 .number-paymk input[type="submit"] {
-    background: #0879c9;
+    background: var(--primary);
     color: #FFFFFF;
     text-align: center;
     padding: 11px 19px;
@@ -1958,7 +1958,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"]:hover,
 .number-paymk input[type="submit"]:hover {
-    background: #F45C5D;
+    background: var(--primary);
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1987,7 +1987,7 @@ h3.title {
 
 h3.title:before {
     content: "";
-    background: #ff9f1c;
+    background: var(--accent);
     position: absolute;
     width: 110px;
     height: 2px;
@@ -2000,7 +2000,7 @@ h3.title:before {
 }
 
 .welcome-left h3 {
-    color: #F45C5D;
+    color: var(--primary);
     font-size: 36px;
     letter-spacing: 1px;
 }
@@ -2014,7 +2014,7 @@ h3.title:before {
 
 .readmore-w3-agileits a {
     border: 1px solid #fff;
-    background: #0879c9;
+    background: var(--primary);
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -2071,7 +2071,7 @@ div#testimonials h4.m-title {
     bottom: -11.5%;
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    border-bottom: 18px solid #f45c5d;
+    border-bottom: 18px solid var(--primary);
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -2097,7 +2097,7 @@ div#testimonials h4.m-title {
 
 .con-ic i {
     font-size: 22px;
-    color: #f45c80;
+    color: var(--primary);
     width: 80px;
     height: 80px;
     line-height: 3.5;
@@ -2106,7 +2106,7 @@ div#testimonials h4.m-title {
 
 .contact-grid1 h4 {
     font-size: 24px;
-    color: #0879c9;
+    color: var(--primary);
     letter-spacing: 1px;
 }
 
@@ -2155,7 +2155,7 @@ div#testimonials h4.m-title {
     outline: none;
     padding: 12px 0;
     border: none;
-    background: #0879c9;
+    background: var(--primary);
     font-size: 1em;
     color: #fff;
     width: 100%;
@@ -2384,7 +2384,7 @@ div#testimonials h4.m-title {
         font-size: 15px;
     }
     .navbar-light .navbar-toggler {
-        border-color: #0879c9;
+        border-color: var(--primary);
         border-radius: 0;
     }
     .carousel-caption p {

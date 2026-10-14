@@ -78,7 +78,7 @@ h2.resp-accordion {
 
 .resp-tab-active {
     border-bottom: none;
-    background-color: #0879c9 !important;
+    background-color: var(--primary) !important;
     color: #fff;
 }
 
@@ -89,20 +89,20 @@ h2.resp-accordion {
 
 h2.resp-accordion {
     font-size: 13px;
-    border: 1px solid #c1c1c1;
-    border-top: 0px solid #c1c1c1;
+    border: 1px solid var(--line);
+    border-top: 0px solid var(--line);
     margin: 0px;
     padding: 10px 15px;
 }
 
 h2.resp-tab-active {
-    border-bottom: 0px solid #c1c1c1 !important;
+    border-bottom: 0px solid var(--line) !important;
     margin-bottom: 0px !important;
     padding: 10px 15px !important;
 }
 
 h2.resp-tab-title:last-child {
-    border-bottom: 12px solid #c1c1c1 !important;
+    border-bottom: 12px solid var(--line) !important;
     background: blue;
 }
 
@@ -121,7 +121,7 @@ ul.resp-tabs-list.hor_1 {
 
 a.w3ls-ads {
     text-decoration: none;
-    color: #0099e5;
+    color: var(--primary);
     font-size: 15px;
     margin: 25px 0 0px 0;
     display: block;
@@ -129,7 +129,7 @@ a.w3ls-ads {
 }
 
 a.w3ls-ads:hover {
-    color: #ff4c4c;
+    color: var(--danger);
 }
 
 .resp-vtabs .resp-tabs-list li {
@@ -166,16 +166,16 @@ a.w3ls-ads:hover {
     margin-right: 0px !important;
     padding: 0px 0px 0px 0px !important;
     margin: 0 0 20px 0 !important;
-    background-color: #28ece3 ! important;
-    background: #28ece3;
+    background-color: var(--primary) ! important;
+    background: var(--primary);
     color: #fff;
     position: relative;
 }
 
 .resp-vtabs li.resp-tab-active:after {
     content: '';
-    border-top: 36px solid #28ece3;
-    border-right: 0px solid #28ece3;
+    border-top: 36px solid var(--primary);
+    border-right: 0px solid var(--primary);
     border-left: 36px solid rgba(40, 236, 227, 0);
     transform: rotate(45deg);
     position: absolute;
@@ -190,20 +190,20 @@ a.w3ls-ads:hover {
     margin-top: 3px;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 12px solid #c1c1c1;
+    border-top: 12px solid var(--line);
 }
 
 h2.resp-tab-active span.resp-arrow {
     border: none;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 12px solid #9B9797;
+    border-bottom: 12px solid var(--line);
 }
 
 /*-----------Accordion styles-----------*/
 
 h2.resp-tab-active {
-    background: #DBDBDB;
+    background: var(--canvas);
     /* !important;*/
 }
 
@@ -212,11 +212,11 @@ h2.resp-tab-active {
 }
 
 .resp-easy-accordion .resp-tab-content {
-    border: 1px solid #c1c1c1;
+    border: 1px solid var(--line);
 }
 
 .resp-easy-accordion .resp-tab-content:last-child {
-    border-bottom: 1px solid #c1c1c1;
+    border-bottom: 1px solid var(--line);
     /* !important;*/
 }
 
@@ -230,7 +230,7 @@ h2.resp-tab-active {
 }
 
 h2.resp-accordion:first-child {
-    border-top: 1px solid #c1c1c1;
+    border-top: 1px solid var(--line);
     /* !important;*/
 }
 
@@ -265,7 +265,7 @@ h2.resp-accordion:first-child {
         display: block;
     }
     .resp-vtabs .resp-tab-content {
-        border: 1px solid #C1C1C1;
+        border: 1px solid var(--line);
     }
     .resp-vtabs .resp-tabs-container {
         border: none;
@@ -277,15 +277,15 @@ h2.resp-accordion:first-child {
         display: none !important;
     }
     .resp-vtabs .resp-tab-content:last-child {
-        border-bottom: 1px solid #c1c1c1 !important;
+        border-bottom: 1px solid var(--line) !important;
     }
 }
 
 @media (max-width: 768px) {
     h2.resp-accordion {
         font-size: 17px;
-        border: 1px solid #c1c1c1;
-        border-top: 0px solid #c1c1c1;
+        border: 1px solid var(--line);
+        border-top: 0px solid var(--line);
         margin: 0px;
         padding: 15px 14px;
     }
