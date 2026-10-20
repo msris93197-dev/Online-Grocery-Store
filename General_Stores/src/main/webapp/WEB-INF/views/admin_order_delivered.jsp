@@ -36,26 +36,21 @@ table {
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page">
-    <jsp:include page="layouts/admin_menu.jsp"></jsp:include>
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/admin/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Pending Orders</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Delivered"/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value="Orders"/>
+<jsp:param name="parentUrl" value="/admin/order/view"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <div class="contact py-sm-5 py-4">
 <div class="container-fluid py-xl-4 py-lg-2">
-<div class="admin-heading"><div><span class="eyebrow">Store administration</span><h2>Delivered orders</h2><p>A record of completed deliveries.</p></div></div>
+
 <c:if test="${not empty pendings}">
                 <div class="alert alert-success alert-dismissible fade show text-center">
                     Order Status Changed to Pending.
@@ -93,7 +88,7 @@ table {
                             ${orders.order.customerAddressType} |
                             ${orders.order.pinCode}</div></td>
                             <td data-label="Item"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${orders.product.code}" target="_blank">
-          <img loading="lazy" alt="${orders.product.name}" src="${pageContext.request.contextPath}${orders.product.image}" width="70" height="90" class="product-image img img-responsiive" /></a>
+          <span class="image-tile compact-image-tile"><img loading="lazy" alt="${orders.product.name}" src="${pageContext.request.contextPath}${orders.product.image}" width="70" height="90" class="product-image img img-responsiive" /></span></a>
           <br>${orders.product.name}</div></td>
                               <td data-label="Qty."><div class="cell-value">${orders.quantity}</div></td>
                             <td data-label="Total Amount (&#x20b9;)"><div class="cell-value"><fmt:formatNumber value="${orders.amount}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></div></td>
@@ -106,7 +101,8 @@ table {
             </table>
         </div>
     </div>
-    <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/cart-footer.jsp"></jsp:include>
     <!-- Bootstrap core JavaScript-->
 <!-- Page level plugin JavaScript-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>

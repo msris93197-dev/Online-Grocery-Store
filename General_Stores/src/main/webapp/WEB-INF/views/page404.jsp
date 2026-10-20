@@ -9,36 +9,18 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <c:choose>
-    <c:when test="${not empty email}">
-        <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-        <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    </c:when>
-    <c:otherwise>
-        <jsp:include page="layouts/navigation-bar.jsp"></jsp:include>
-        <jsp:include page="layouts/menu.jsp"></jsp:include>
-    </c:otherwise>
-</c:choose>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l">
-
-    </div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Page 404</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Page not found"/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/home"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <br><!-- 404 page start -->
 <div class="fourzerofour">
     <div class="container">
@@ -55,6 +37,7 @@
     </div>
 </div>
 <!-- 404 page End -->
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
 </body>
 </html>

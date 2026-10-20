@@ -11,11 +11,23 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page auth-page">
-    <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Admin login"/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/admin/home"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
+
 <!-- log in -->
     <br><br>
     <div class="container h-100">
-        <div class="auth-heading"><span class="eyebrow">Pantrix admin</span><h2>Store administration</h2><p>Sign in to manage products and orders.</p></div>
+
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">
@@ -40,6 +52,7 @@
                 </div>
                 </div>
             </div>
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
 </body>
 </html>

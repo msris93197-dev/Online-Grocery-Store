@@ -12,44 +12,25 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <c:choose>
-    <c:when test="${not empty email}">
-        <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-        <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    </c:when>
-    <c:otherwise>
-        <jsp:include page="layouts/navigation-bar.jsp"></jsp:include>
-        <jsp:include page="layouts/menu.jsp"></jsp:include>
-    </c:otherwise>
-</c:choose>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l">
-
-    </div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Contact us"/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/home"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <!-- log in -->
     <br>
     <!-- contact -->
     <div class="contact py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">Contact
-                Us</h3>
+
             <!-- //tittle heading -->
             <div class="row contact-grids agile-1 mb-5">
                 <div class="col-sm-4 contact-grid agileinfo-6 mt-sm-0 mt-2">
@@ -59,20 +40,17 @@
                         </div>
                         <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Address</h4>
                         <p style="font-weight: bold;color:var(--ink);">Pantrix
-                            <label style="font-weight: bold;color:var(--ink);">Shop No.4 Building No.51/B Gokuldham Society Goregaon(E), 400000</label>
+                            <label style="font-weight: bold;color:var(--ink);">Online grocery store</label>
                         </p>
                     </div>
                 </div>
                 <div class="col-sm-4 contact-grid agileinfo-6 my-sm-0 my-4">
                     <div class="contact-grid1 text-center">
                         <div class="con-ic">
-                            <i class="fas fa-phone rounded-circle"></i>
+                            <i class="fas fa-clock rounded-circle"></i>
                         </div>
-                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Call Us</h4>
-                        <p style="font-weight: bold;color:var(--ink);"><a style="font-weight: bold;color:var(--ink);" href="tel:+91121122000">+(91) 121 122 000</a>
-
-<!-- 							<label>+(91) 121 122 000</label> -->
-                        </p>
+                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Support Hours</h4>
+                        <p style="font-weight: bold;color:var(--ink);">Mon &ndash; Sat, 9 AM &ndash; 9 PM</p>
                     </div>
                 </div>
                 <div class="col-sm-4 contact-grid agileinfo-6">
@@ -82,7 +60,7 @@
                         </div>
                         <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Email</h4>
                         <p>
-                            <a style="font-weight: bold;color:var(--ink);" href="mailto:javahub018@gmail.com">javahub018@gmail.com</a>
+                            <a style="font-weight: bold;color:var(--ink);" href="#form">Write to us using the form below</a>
                         </p>
                     </div>
                 </div>
@@ -147,7 +125,8 @@
     <!-- map -->
 
     <!-- //map -->
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
     <script src="${pageContext.request.contextPath}/js/contact.js"></script>
 </body>
 </html>

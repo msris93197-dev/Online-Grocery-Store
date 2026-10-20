@@ -1,0 +1,8 @@
+<%-- Grouped administration navigation and responsive drawer. --%>
+<div class="sidebar-backdrop" hidden></div>
+<aside id="app-sidebar" class="app-sidebar" aria-label="Admin navigation"><button class="shell-button drawer-close" type="button" aria-label="Close navigation">&times;</button><nav id="navbarSupportedContent">
+<p class="nav-section">Overview</p><a href="${pageContext.request.contextPath}/admin/home"><i class="fas fa-home" aria-hidden="true"></i><span>Dashboard</span></a>
+<p class="nav-section">Catalogue</p><a href="${pageContext.request.contextPath}/admin/product/view"><i class="fas fa-th-large" aria-hidden="true"></i><span>View products</span></a><a href="${pageContext.request.contextPath}/admin/product/add"><i class="fas fa-plus" aria-hidden="true"></i><span>Add product</span></a>
+<p class="nav-section">Orders</p><a href="${pageContext.request.contextPath}/admin/order/view"><i class="fas fa-box" aria-hidden="true"></i><span>All orders</span></a><a href="${pageContext.request.contextPath}/admin/order/pending-orders"><i class="far fa-clock" aria-hidden="true"></i><span>Pending</span></a><a href="${pageContext.request.contextPath}/admin/order/delivered-orders"><i class="fas fa-check" aria-hidden="true"></i><span>Delivered</span></a><a href="${pageContext.request.contextPath}/admin/order/cancelled-orders"><i class="fas fa-times" aria-hidden="true"></i><span>Cancelled</span></a>
+<p class="nav-section">People</p><a href="${pageContext.request.contextPath}/admin/customer/view"><i class="fas fa-users" aria-hidden="true"></i><span>Customers</span></a><a href="${pageContext.request.contextPath}/admin/contact/view"><i class="far fa-envelope" aria-hidden="true"></i><span>Contact messages</span></a>
+</nav></aside>

@@ -9,25 +9,18 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page auth-page">
-    <jsp:include page="layouts/navigation-bar.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Forgot Password</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Reset admin access"/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/admin/home"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <!-- log in -->
     <br>
     <div class="container h-100">
@@ -55,7 +48,7 @@
         <button type="button" class="close" aria-label="Dismiss message" data-dismiss="alert">&times;</button>
                 </div>
         </c:if>
-        <div class="auth-heading"><span class="eyebrow">Pantrix admin</span><h2>Reset admin access</h2><p>Enter your email to receive a password reset link.</p></div>
+
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">
@@ -72,6 +65,7 @@
                 </div>
                 </div>
             </div>
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -72,7 +72,7 @@
     <!-- //scroll seller -->
 
     <!-- smoothscroll -->
-    <script src="${pageContext.request.contextPath}/js/SmoothScroll.min.js"></script>
+
     <!-- //smoothscroll -->
 
     <!-- start-smooth-scrolling -->
@@ -85,7 +85,7 @@
 
                 $('html,body').animate({
                     scrollTop: $(this.hash).offset().top
-                }, 1000);
+                }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200);
             });
         });
     </script>
@@ -103,7 +103,7 @@
             };
             */
             $().UItoTop({
-                easingType: 'easeOutQuart'
+                easingType: 'easeOutQuart', scrollSpeed: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200
             });
 
         });

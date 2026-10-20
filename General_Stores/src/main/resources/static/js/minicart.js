@@ -1810,7 +1810,7 @@ var defaults = module.exports = {
 
     strings: {
         //button: 'Check Out <img src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.1/paypal_65x18.png" width="65" height="18" alt="paypals" />',
-        button: 'Save to Cart <img src="" width="65" height="18" alt="paypals" />',
+        button: 'Save to Cart',
         subtotal: 'Total:',
         discount: 'Discount:',
         empty: 'Your shopping cart is empty'

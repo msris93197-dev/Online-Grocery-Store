@@ -56,7 +56,7 @@
         });
     </script>
     <script src="${pageContext.request.contextPath}/js/scroll.js"></script>
-    <script src="${pageContext.request.contextPath}/js/SmoothScroll.min.js"></script>
+
     <script src="${pageContext.request.contextPath}/js/move-top.js"></script>
     <script src="${pageContext.request.contextPath}/js/easing.js"></script>
     <script>
@@ -66,14 +66,14 @@
 
                 $('html,body').animate({
                     scrollTop: $(this.hash).offset().top
-                }, 1000);
+                }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200);
             });
         });
     </script>
     <script>
         $(document).ready(function () {
             $().UItoTop({
-                easingType: 'easeOutQuart'
+                easingType: 'easeOutQuart', scrollSpeed: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 200
             });
         });
     </script>

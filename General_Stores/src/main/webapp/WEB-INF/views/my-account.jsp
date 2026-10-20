@@ -14,33 +14,25 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app account-page">
-    <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-    <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l">
-    </div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>My Account</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="My account"/>
+<jsp:param name="subtitle" value="Manage your profile and delivery details."/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/home"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <!-- log in -->
     <br>
 <!-- register -->
     <div class="contact py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
-<div class="auth-heading"><span class="eyebrow">Your account</span><h2>My account</h2><p>Manage your profile and delivery details.</p></div>
+
         <c:if test="${not empty success}">
             <div class="alert alert-success alert-dismissible fade show">
                 Account Updated Successfully.
@@ -108,6 +100,7 @@
             <!-- //form -->
         </div>
     </div>
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
 </body>
 </html>

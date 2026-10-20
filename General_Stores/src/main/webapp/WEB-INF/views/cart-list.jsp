@@ -35,38 +35,25 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-    <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>My Cart</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="My cart"/>
+<jsp:param name="subtitle" value="Review your basket before checkout."/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value="My Pantrix"/>
+<jsp:param name="parentUrl" value="/customer/my-account"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value="1"/>
+</jsp:include>
     <!-- checkout page -->
     <div class="privacy py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">My Cart</h3>
-            <c:if test="${empty items}">
-                <div class="alert alert-info alert-dismissible fade show text-center">
-                    There is no item(s) in your Cart.
-                    &nbsp;<a href="${pageContext.request.contextPath}/home" class="btn btn-success text-right">Shop Now</a>
-                    <button type="button" class="close" aria-label="Dismiss message" data-dismiss="alert">&times;</button>
-                </div>
-            </c:if>
+
+            <c:if test="${empty items}"><div class="empty-state"><i class="fas fa-shopping-basket" aria-hidden="true"></i><h2>Your basket is waiting</h2><p>Add a few everyday favourites to get started.</p><a class="btn btn-primary" href="${pageContext.request.contextPath}/product/all">Browse all products</a></div></c:if>
 <%-- 			<a href="${pageContext.request.contextPath}/home" class="btn btn-success text-right">Continue Shopping</a> --%>
             <c:if test="${not empty delete}">
                 <div class="alert alert-success alert-dismissible fade show text-center">
@@ -111,7 +98,7 @@
 <!-- 		  &emsp;&ensp;<input type="checkbox" class="form-check-input checks" name="number[]" value="" id=""> -->
           </div></td>
           <td data-label="Item"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${item.product.code}" target="_blank">
-          <img loading="lazy" alt="${item.product.name}" src="${pageContext.request.contextPath}${item.product.image}" width="70" height="90" class="product-image img-fluid" /></a>
+          <span class="image-tile compact-image-tile"><img loading="lazy" alt="${item.product.name}" src="${pageContext.request.contextPath}${item.product.image}" width="70" height="90" class="product-image img-fluid" /></span></a>
           <br>${item.product.name}</div></td>
           <td class="quantity" data-label="Quantity"><div class="cell-value">${item.quantity}</div></td>
           <td class="mrp_price" data-label="MRP(&#x20b9;)"><div class="cell-value"><del><fmt:formatNumber value="${item.mrpPrice}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></del></div></td>
@@ -213,6 +200,7 @@
         </div>
     </div>
     <!-- //checkout page -->
+</main>
 <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
     <!-- Bootstrap core JavaScript-->
 <!-- Page level plugin JavaScript-->

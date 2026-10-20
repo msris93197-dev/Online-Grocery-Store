@@ -38,8 +38,10 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
+-- Placeholder admin for local setup only. Change the email and password before using
+-- this script on a real database (this file is public).
 INSERT INTO `admin` (`id`, `added_date`, `email`, `password`, `name`) VALUES
-(1, '2020-05-16 00:46:08', 'javahub018@gmail.com', '123456', 'Dharmesh');
+(1, '2020-05-16 00:46:08', 'admin@example.com', 'change-me', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -61,8 +63,6 @@ CREATE TABLE `cart` (
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `price`, `quantity`, `total_price`, `customer_id`, `product_id`, `mrp_price`) VALUES
-(5, 190, 1, 190, 1, 11, 200);
 
 -- --------------------------------------------------------
 
@@ -83,8 +83,6 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `contact_date`, `email`, `message`, `name`, `subject`) VALUES
-(2, '2020-07-25 19:45:20', 'dharmeshmourya043@gmail.com', 'Hi, This is testing email contacts.', 'Dharmesh Mourya', 'Testing');
 
 -- --------------------------------------------------------
 
@@ -134,10 +132,6 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `active`, `amount`, `customer_address`, `customer_address_type`, `customer_email`, `customer_name`, `customer_phone`, `order_date`, `order_num`, `pin_code`) VALUES
-(237, b'1', 284, 'Ram Nagar,Vrindavan Society, Mumbai', 'Home', 'dharmeshmourya043@gmail.com', 'Dharmesh', '1223334560', '2020-07-25 19:59:26', 1000, '400330'),
-(238, b'1', 95, 'Ram Nagar,Vrindavan Society, Mumbai', 'Home', 'dharmeshmourya043@gmail.com', 'Dharmesh', '1223334560', '2020-07-25 19:59:26', 1001, '400330'),
-(239, b'1', 65, 'Ram Nagar,Vrindavan Society, Mumbai', 'Home', 'dharmeshmourya043@gmail.com', 'Dharmesh', '1223334560', '2020-07-25 19:59:26', 1002, '400330');
 
 -- --------------------------------------------------------
 
@@ -162,10 +156,6 @@ CREATE TABLE `order_detail` (
 -- Dumping data for table `order_detail`
 --
 
-INSERT INTO `order_detail` (`id`, `amount`, `price`, `quantity`, `order_id`, `product_id`, `payment_id`, `order_status`, `mrp_price`, `payment_mode`) VALUES
-(232, 284, 142, 2, 237, 10, 1000, 'Delivered', 150, 'COD'),
-(233, 95, 95, 1, 238, 9, 1000, 'Delivered', 100, 'COD'),
-(234, 65, 65, 1, 239, 5, 1000, 'Delivered', 72, 'COD');
 
 -- --------------------------------------------------------
 

@@ -2,18 +2,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <link rel='icon' href='/images/favicon.ico' type='image/x-icon'/>
-    <meta name="keywords" content="Pantrix, Pantrix, General Store, Gokuldham Society, Pantrix Thane, Shop no.4, Grocery Shop" />
-    <script>
-// 	console.log("clearing html storage.");
-    localStorage.clear();
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
+    <meta name="keywords" content="Pantrix, online grocery store, pantry essentials, groceries" />
+    <script>try { if (window.matchMedia('(min-width: 1200px)').matches && localStorage.getItem('pantrix-sidebar-collapsed') === 'true') document.documentElement.classList.add('sidebar-precollapsed'); } catch (e) { /* Storage is optional. */ }</script>
     <!-- //Meta tag Keywords -->
     <!-- Custom-Files -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />

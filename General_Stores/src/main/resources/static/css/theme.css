@@ -490,3 +490,163 @@ body.grocery-app { margin: 0; background: var(--canvas); color: var(--ink); font
 }
 .grocery-app .btn .cart-count { color: var(--text) !important; }
 .grocery-app .badge-deal { color: var(--deal-text); background: var(--deal-soft); }
+/* Application shell */
+/* Responsive Pantrix application shell */
+html { scroll-padding-top:100px }
+.grocery-app .app-topbar { position:sticky; top:0; z-index:1100; display:flex; align-items:center; gap:16px; padding:14px 24px; min-height:78px; background:var(--surface); border-bottom:1px solid var(--border); transition:box-shadow 180ms ease-out }
+.app-topbar.scrolled { box-shadow:var(--shadow-hover) }
+.app-brand { display:inline-flex; align-items:center; gap:8px; white-space:nowrap; font-size:23px; font-weight:800 }
+.app-brand small { font-size:12px; font-weight:600 }
+.grocery-app .shell-button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; padding:10px; border:1px solid var(--border); background:var(--brand-soft); color:var(--brand); border-radius:10px; cursor:pointer }
+.shell-cart { position:relative }
+.shell-search { display:flex; flex:1; gap:4px; padding:4px; border:1px solid var(--border); border-radius:12px; background:var(--bg); max-width:640px; margin:0 auto }
+.grocery-app .shell-search input { min-width:0; width:100%; flex:1; border:0; background:transparent; padding:8px 12px; color:var(--text) }
+.grocery-app .shell-search button { border:0; border-radius:8px; padding:8px 16px; background:var(--brand); color:white; cursor:pointer }
+.profile-control { position:relative }
+.admin-topbar .profile-control { margin-left:auto }
+.profile-links { position:absolute; right:0; top:calc(100% + 10px); width:225px; padding:8px; border:1px solid var(--border); border-radius:12px; background:white; box-shadow:var(--shadow-hover); animation:shell-enter 180ms ease-out }
+.profile-links[hidden],.sidebar-backdrop[hidden] { display:none }
+.profile-links a,.app-sidebar a { display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:8px; font-weight:600 }
+.profile-links a:hover,.app-sidebar a:hover { background:var(--bg) }
+.profile-links i,.app-sidebar i { width:20px; flex-shrink:0; text-align:center }
+.app-sidebar { position:fixed; left:0; top:78px; bottom:0; width:236px; padding:18px 14px; z-index:1090; background:var(--surface); border-right:1px solid var(--border); overflow-y:auto; transition:width 200ms ease-out,transform 200ms ease-out }
+.app-sidebar a[aria-current=page] { background:var(--brand-soft); color:var(--brand); box-shadow:inset 3px 0 var(--accent) }
+.grocery-app .nav-section { margin:22px 12px 6px; font-size:10px; font-weight:750; text-transform:uppercase; letter-spacing:.13em }
+.nav-section:first-child { margin-top:0 }
+.drawer-close { display:none !important }
+.app-main { margin-left:236px; min-width:0; padding:26px 32px 48px; min-height:calc(100vh - 240px); position:relative; animation:shell-enter 200ms ease-out; transition:margin-left 200ms ease-out }
+.grocery-app .store-footer,.grocery-app .copy-right { margin-left:236px; transition:margin-left 200ms ease-out }
+.grocery-app .app-main .container,.grocery-app .app-main .container-fluid { max-width:100%; padding-left:0; padding-right:0 }
+.grocery-app .app-main > :is(.privacy,.ads-grid,.contact,.welcome,.banner-bootom-w3-agileits) { padding-top:12px !important }
+.app-breadcrumbs ol { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:0; margin:0 0 18px; list-style:none; font-size:12px; color:var(--muted) }
+.app-breadcrumbs li + li::before { content:'\203a'; padding-right:8px }
+.app-breadcrumbs li { overflow-wrap:anywhere }
+.app-page-header { display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin:0 0 24px }
+.grocery-app .app-page-header h1 { margin:0; font-size:clamp(25px,3vw,34px); overflow-wrap:anywhere }
+.app-page-header p { margin:8px 0 0 }
+.back-link { padding:8px 12px; border:1px solid var(--border); border-radius:8px; white-space:nowrap }
+.checkout-progress { display:flex; list-style:none; padding:0; margin:0 0 28px; gap:8px }
+.checkout-progress li { flex:1; padding:12px; border:1px solid var(--border); border-radius:10px; color:var(--muted); background:var(--surface); text-align:center }
+.checkout-progress .current { color:var(--brand); background:var(--accent-soft); border-color:var(--accent); font-weight:750 }
+.sidebar-collapsed .app-sidebar { width:72px; padding-inline:10px }
+.sidebar-collapsed .app-sidebar a { justify-content:center; margin-bottom:8px }
+.sidebar-collapsed .app-sidebar a span,.sidebar-collapsed .nav-section { position:absolute; width:1px; height:1px; clip-path:inset(50%); overflow:hidden; white-space:nowrap }
+.sidebar-collapsed .app-main,.sidebar-collapsed .store-footer,.sidebar-collapsed .copy-right { margin-left:72px }
+.grocery-app .product-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin:0 }
+.grocery-app .product-grid .product-men { width:auto; max-width:none; padding:0; margin:0 !important }
+.grocery-app .pantry-card { height:100%; padding:14px; display:flex; flex-direction:column; transition:transform 180ms ease-out,box-shadow 180ms ease-out }
+.pantry-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-hover) }
+.product-primary-link { display:block }
+.grocery-app .card-product-name { font-size:16px; line-height:1.4; margin:16px 0 10px; text-align:left }
+.grocery-app .pantry-card .info-product-price { text-align:left; margin:0 0 14px }
+.grocery-app .pantry-card .snipcart-details { width:100%; margin:auto 0 0; padding:0 }
+.grocery-app .card-actions { display:flex; flex-wrap:wrap; gap:8px }
+.grocery-app .card-actions .btn { flex:1; padding:10px 8px; margin:0; font-size:12px; min-width:90px }
+.grocery-app .image-tile { position:relative; display:flex; align-items:center; justify-content:center; isolation:isolate; overflow:hidden; min-height:190px; border-radius:12px; background:linear-gradient(135deg,var(--hero-start),var(--hero-end)) }
+.image-tile .product-image { width:139px !important; height:139px !important; max-width:100%; object-fit:contain; transition:opacity 180ms ease-out }
+.images-enhanced .image-tile:not(.image-ready):not(.image-error) img { opacity:0 }
+.images-enhanced .image-tile:not(.image-ready):not(.image-error)::after,.skeleton-block::after { content:''; position:absolute; inset:0; background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.6) 50%,transparent 80%); transform:translateX(-100%); animation:skeleton-shimmer 1.4s linear infinite; pointer-events:none }
+.image-error img { visibility:hidden }
+.image-placeholder { position:absolute; font-size:40px; color:var(--muted) }
+.grocery-app .detail-stage-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:40px; align-items:start; padding:0; background:transparent; border:0; box-shadow:none }
+.grocery-app .detail-image-stage { min-height:400px; border:1px solid var(--border); box-shadow:var(--shadow) }
+.grocery-app .detail-image-stage img { width:174px !important; height:174px !important }
+.grocery-app .detail-info h2 { font-size:clamp(26px,3vw,36px); margin:10px 0 16px }
+.detail-info { min-width:0; overflow-wrap:anywhere }
+.grocery-app .detail-price .item_price { font-size:32px; font-weight:800; color:var(--deal-text) }
+.detail-price del { color:var(--muted); margin-left:8px }
+.grocery-app .detail-saving { color:var(--success-text); margin:6px 0 18px }
+.assurance-chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px }
+.assurance-chips span { padding:6px 10px; background:var(--brand-soft); border-radius:30px; font-size:11px }
+.assurance-chips i { margin-right:5px }
+.grocery-app .detail-cart-form { display:block }
+.grocery-app .detail-cart-form label { display:block }
+.quantity-stepper { display:inline-flex; align-items:center; border:1px solid var(--border); border-radius:10px; overflow:hidden; margin:8px 0 16px; background:white }
+.quantity-stepper button { width:44px; height:44px; border:0; background:var(--brand-soft); color:var(--brand); cursor:pointer; font-size:20px }
+.grocery-app .quantity-stepper input { width:60px; height:44px; border:0; margin:0; text-align:center; padding:0 }
+.detail-primary-action .btn { width:100% }
+.mobile-action-price { display:none }
+.grocery-app .detail-checkout input[type=submit] { width:100%; margin-top:12px; padding:12px; border:1px solid var(--brand); border-radius:10px; color:var(--brand); background:var(--surface); cursor:pointer }
+.empty-state { grid-column:1/-1; width:100%; text-align:center; padding:48px 20px; border:1px dashed var(--border); border-radius:14px; background:var(--surface) }
+.empty-state > i { display:block; font-size:38px; color:var(--accent); margin-bottom:20px }
+.grocery-app .empty-state h2 { font-size:23px }
+.empty-state p { margin:12px 0 20px }
+.navigation-skeleton { position:absolute; inset:0; min-height:100vh; z-index:20; padding:32px; background:var(--bg) }
+.navigation-skeleton[hidden] { display:none }
+.navigation-skeleton-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px }
+.skeleton-block { position:relative; overflow:hidden; background:var(--brand-soft); border-radius:12px; height:280px }
+.skeleton-title { height:36px; width:55%; margin-bottom:32px }
+.navigation-skeleton-details { display:grid; grid-template-columns:1fr 1fr; gap:32px }
+.navigation-skeleton-details .skeleton-block { height:400px }
+.grocery-app button,.grocery-app .btn,.grocery-app input[type=submit] { transition:background 180ms ease-out,transform 150ms ease-out }
+.grocery-app button:active,.grocery-app .btn:active { transform:scale(.98) }
+.cart-count.bump { animation:cart-bump 220ms ease-out }
+.grocery-app #PPminicarts { transition:opacity 180ms ease-out,transform 180ms ease-out }
+@keyframes shell-enter { from { opacity:0; transform:translateY(6px) } to { opacity:1; transform:translateY(0) } }
+@keyframes cart-bump { 50% { transform:scale(1.25) } }
+@keyframes skeleton-shimmer { to { transform:translateX(100%) } }
+@media (max-width:1199px) {
+ .app-sidebar { top:0; z-index:1300; width:min(300px,85vw); transform:translateX(-100%); padding-top:16px }
+ .drawer-close { display:flex !important; margin:0 0 20px auto }
+ .drawer-open .app-sidebar { transform:translateX(0) }
+ body.drawer-open { overflow:hidden }
+ .sidebar-backdrop { position:fixed; inset:0; z-index:1200; background:rgba(42,28,20,.4); animation:backdrop-enter 180ms ease-out }
+ .app-main,.grocery-app .store-footer,.grocery-app .copy-right { margin-left:0 }
+ .app-main { padding:24px }
+}
+@keyframes backdrop-enter { from { opacity:0 } to { opacity:1 } }
+@media (max-width:767px) {
+ .grocery-app .app-topbar { padding:10px 14px; gap:8px; flex-wrap:wrap }
+ .app-brand { font-size:21px }
+ .profile-control { margin-left:auto }
+ .profile-toggle span,.profile-toggle .fa-chevron-down { display:none }
+ .shell-search { order:5; flex-basis:100%; max-width:none }
+ .app-main { padding:20px 16px 32px }
+ .grocery-app .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
+ .grocery-app .pantry-card { padding:10px }
+ .grocery-app .image-tile { min-height:160px }
+ .grocery-app .image-tile .product-image { width:120px !important; height:120px !important }
+ .grocery-app .detail-stage-layout { grid-template-columns:1fr; gap:24px }
+ .grocery-app .detail-image-stage { min-height:250px }
+ .grocery-app .detail-image-stage img { width:174px !important; height:174px !important }
+ .detail-primary-action { position:fixed; bottom:0; left:0; right:0; z-index:1050; background:var(--surface); box-shadow:0 -4px 20px var(--shadow-color); padding:12px 16px max(12px,env(safe-area-inset-bottom)); display:flex; align-items:center; gap:20px; border-top:1px solid var(--border) }
+ .mobile-action-price { display:block; font-size:22px; white-space:nowrap }
+ body:has(.detail-primary-action) { padding-bottom:85px }
+ .checkout-progress li { padding:10px 4px; font-size:12px }
+ .navigation-skeleton { padding:20px 16px }
+ .navigation-skeleton-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
+ .navigation-skeleton-details { grid-template-columns:1fr }
+ .navigation-skeleton-details .skeleton-block { height:250px }
+ .grocery-app .app-main .px-sm-4 { padding-inline:0 !important }
+}
+@media (prefers-reduced-motion:reduce) {
+ .grocery-app *,.grocery-app *::before,.grocery-app *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important }
+ .pantry-card:hover { transform:none }
+ .images-enhanced .image-tile::after,.skeleton-block::after { transform:none !important; background:rgba(255,255,255,.18) !important }
+}
+/* Keep auth cards centred within the shell, and maintain image stages without upscaling. */
+.grocery-app.auth-page .app-main > .container.h-100 { max-width:560px; height:auto !important; margin:28px auto 48px; padding:28px; background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow) }
+.grocery-app .image-tile img.product-image { background:transparent; max-height:139px !important }
+.grocery-app .detail-image-stage img.product-image { max-height:174px !important }
+.grocery-app .compact-image-tile { min-height:80px; min-width:80px; display:inline-flex }
+.grocery-app .compact-image-tile img.product-image { width:70px !important; height:70px !important }
+.navigation-loading > :not(.navigation-skeleton) { visibility:hidden }
+@media(max-width:767px) { .grocery-app.auth-page .app-main > .container.h-100 { padding:24px; margin-top:12px } }
+@media(min-width:1200px) {
+ .sidebar-precollapsed .app-sidebar { width:72px }
+ .sidebar-precollapsed .app-main,.sidebar-precollapsed .store-footer,.sidebar-precollapsed .copy-right { margin-left:72px }
+ .sidebar-precollapsed .app-sidebar a span,.sidebar-precollapsed .nav-section { visibility:hidden }
+}
+.grocery-app .app-main .ads-grid .py-xl-4 { padding-top:0 !important }
+.grocery-app .app-main .ads-grid .px-sm-4 { padding-top:12px !important }
+.grocery-app .quantity-stepper :focus-visible { outline-offset:-3px }
+.grocery-app.minicarts-showing #PPminicarts { animation:minicart-enter 180ms ease-out }
+@keyframes minicart-enter { from { opacity:0 } to { opacity:1 } }
+@media(prefers-reduced-motion:reduce) { .grocery-app.minicarts-showing #PPminicarts { animation:none !important } }
+.shell-cart-form { margin:0; flex-shrink:0 }
+.empty-state + .table-responsive { display:none }
+/* Opacity on the main keeps the mobile purchase bar fixed to the viewport during entry. */
+.app-main { animation:page-enter 200ms ease-out }
+@keyframes page-enter { from { opacity:0 } to { opacity:1 } }
+@media(prefers-reduced-motion:reduce) { .app-main { animation:none !important } }
+@media(max-width:767px) { html { scroll-padding-top:150px } }

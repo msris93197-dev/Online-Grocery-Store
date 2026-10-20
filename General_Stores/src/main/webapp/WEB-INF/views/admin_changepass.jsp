@@ -9,25 +9,18 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page auth-page">
-    <jsp:include page="layouts/admin_menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="/admin/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Change Password</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Change password"/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/admin/home"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 <!-- log in -->
     <br>
     <div class="container h-100">
@@ -55,7 +48,7 @@
         <button type="button" class="close" aria-label="Dismiss message" data-dismiss="alert">&times;</button>
                 </div>
         </c:if>
-        <div class="auth-heading"><span class="eyebrow">Pantrix admin</span><h2>Change your password</h2><p>Update your administration account password.</p></div>
+
 <div class="d-flex justify-content-center h-100">
             <div class="row">
                 <div class="col-md-12">
@@ -76,7 +69,8 @@
                 </div>
                 </div>
             </div>
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" type="text/javascript"></script>
     <script>
     function validatePassword() {

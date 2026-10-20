@@ -11,81 +11,27 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <c:choose>
-    <c:when test="${not empty email}">
-        <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-        <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    </c:when>
-    <c:otherwise>
-        <jsp:include page="layouts/navigation-bar.jsp"></jsp:include>
-        <jsp:include page="layouts/menu.jsp"></jsp:include>
-    </c:otherwise>
-</c:choose>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l">
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Product details"/>
+<jsp:param name="crumb" value="${product.name}"/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value="All products"/>
+<jsp:param name="parentUrl" value="/product/all"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
 
-    </div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Product Details</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
-    <!-- Single Page -->
-    <div class="banner-bootom-w3-agileits py-5">
-        <div class="container py-xl-4 py-lg-2">
-            <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">Product
-                View</h3>
-            <!-- //tittle heading -->
-            <div class="row product-detail-layout">
-                <div class="col-lg-5 col-md-8 single-right-left ">
-                    <div class="grid images_3_of_2">
-                        <div class="flexslider">
-                        <div class="thumb-image">
-                            <img loading="lazy" src="${pageContext.request.contextPath}${product.image}"
-                         class="product-image img img-responsive img-fluid" alt="${product.name}">
-                        </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7 single-right-left simpleCart_shelfItem">
-                    <span class="eyebrow">Everyday pantry essentials</span><h3 class="mb-3">${product.name}</h3>
-<c:if test="${product.mrpPrice > 0 and product.mrpPrice > product.price}"><span class="badge badge-deal mb-3"><fmt:formatNumber value="${(product.mrpPrice - product.price) * 100 / product.mrpPrice}" maxFractionDigits="0" />% off MRP</span></c:if>
-                    <p class="mb-3">
-                        <span class="item_price">&#x20b9;<fmt:formatNumber value="${product.price}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></span>
-                        <del>&#x20b9;<fmt:formatNumber value="${product.mrpPrice}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></del>
-                        <label>Free delivery</label>
-                    </p>
-                    <div class="product-single-w3l">
-                        <p class="my-sm-4 my-3">
-                            ${product.description}
-                        </p>
-                    </div>
-                    <div class="single-infoagile">
-                        <ul>
-                            <li class="mb-3">
-                                Cash on Delivery Eligible.
-                            </li>
-                            <li class="mb-3">
-                                Shop your daily essentials with ease.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <form action="#" method="post" class="detail-cart-form">
+<section class="product-detail-layout detail-stage-layout">
+<div class="detail-image-stage image-tile"><img width="139" height="139" src="${pageContext.request.contextPath}${product.image}" class="product-image" alt="${product.name}"></div>
+<div class="detail-info"><span class="eyebrow">Everyday pantry essentials</span><h2><c:out value="${product.name}"/></h2><p><c:out value="${product.description}"/></p>
+<div class="detail-price"><span class="item_price">&#8377;<fmt:formatNumber value="${product.price}" maxFractionDigits="2" groupingUsed="false"/></span> <del>&#8377;<fmt:formatNumber value="${product.mrpPrice}" maxFractionDigits="2" groupingUsed="false"/></del></div>
+<c:if test="${product.mrpPrice > product.price and product.mrpPrice > 0}"><p class="detail-saving">You save &#8377;<fmt:formatNumber value="${product.mrpPrice-product.price}" maxFractionDigits="2"/> (<fmt:formatNumber value="${(product.mrpPrice-product.price)*100/product.mrpPrice}" maxFractionDigits="0"/>%)</p></c:if>
+<div class="assurance-chips"><span><i class="fas fa-money-bill-wave" aria-hidden="true"></i> Cash on delivery eligible</span><span><i class="fas fa-truck" aria-hidden="true"></i> Free delivery</span></div>
+<form action="#" method="post" class="detail-cart-form">
   <input type="hidden" name="cmd" value="_cart" />
   <input type="hidden" name="add" value="1" />
   <input type="hidden" name="item_id" value="${product.id}" />
@@ -96,39 +42,17 @@
   <input type="hidden" name="currency_code" value="INR" />
   <input type="hidden" name="return" value=" " />
   <input type="hidden" name="cancel_return" value=" " />
-  <label for="detail-quantity">Quantity<input id="detail-quantity" type="number" name="quantity" min="1" step="1" value="1" required /></label>
-  <input type="submit" class="btn btn-success" value="Add to cart" />
+  <label for="detail-quantity">Quantity</label><div class="quantity-stepper"><button type="button" data-quantity-step="-1" aria-label="Decrease quantity">&#8722;</button><input id="detail-quantity" type="number" name="quantity" min="1" step="1" value="1" required /><button type="button" data-quantity-step="1" aria-label="Increase quantity">+</button></div>
+  <div class="detail-primary-action"><strong class="mobile-action-price">&#8377;<fmt:formatNumber value="${product.price}" maxFractionDigits="2"/></strong><input type="submit" class="btn btn-success" value="Add to cart" /></div>
 </form>
-<div class="occasion-cart">
-                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                            <form action="/cart/checkout" method="post">
+<div class="detail-checkout"><form action="/cart/checkout" method="post">
                                 <fieldset>
                                     <input type="hidden" name="code" value="${product.code}" />
                                     <input type="submit" name="submit" value="Checkout" class="button" />
                                 </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <jsp:include page="layouts/footer.jsp"></jsp:include>
-    <!-- //Single Page -->
-    <!-- imagezoom -->
-    <script src="${pageContext.request.contextPath}/js/imagezoom.js"></script>
-    <!-- //imagezoom -->
-    <!-- flexslider -->
-    <script src="${pageContext.request.contextPath}/js/jquery.flexslider.js"></script>
-    <script>
-        // Can also be used with $(document).ready()
-        $(window).load(function () {
-            $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails"
-            });
-        });
-    </script>
-    <!-- //FlexSlider-->
+                            </form></div>
+</div></section>
+</main>
+<jsp:include page="layouts/footer.jsp"></jsp:include>
 </body>
 </html>

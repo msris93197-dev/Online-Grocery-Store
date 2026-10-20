@@ -13,31 +13,24 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-    <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>Checkout</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Delivery address"/>
+<jsp:param name="subtitle" value="Tell us where to deliver your essentials."/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value="My cart"/>
+<jsp:param name="parentUrl" value="/cart/my-cart"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value="2"/>
+</jsp:include>
     <!-- checkout page -->
     <div class="privacy py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">Checkout</h3>
+
     <div class="container">
     <table id="example" class="responsive-table table table-hover">
       <thead>
@@ -53,7 +46,7 @@
         <tr>
 <%--           <td data-label="Product Name"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${code}">${itemName}</a></div></td> --%>
 <td data-label="Quantity"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${code}" target="_blank">
-          <img loading="lazy" alt="${itemName}" src="${pageContext.request.contextPath}${image}" width="70" height="90" class="product-image img img-responsiive" /></a>
+          <span class="image-tile compact-image-tile"><img loading="lazy" alt="${itemName}" src="${pageContext.request.contextPath}${image}" width="70" height="90" class="product-image img img-responsiive" /></span></a>
           <br>${itemName}</div></td>
           <td data-label="Price"><div class="cell-value">${quantity}</div></td>
           <td data-label="Total Price"><div class="cell-value"><fmt:formatNumber value="${price}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></div></td>
@@ -123,6 +116,7 @@
         <div>
         </div>
     </div>
+</main>
 <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
 <script type="text/javascript">
     $(document).ready(function(){

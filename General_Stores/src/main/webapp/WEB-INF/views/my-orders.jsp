@@ -14,26 +14,19 @@
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app">
-    <jsp:include page="layouts/user-navigation.jsp"></jsp:include>
-    <jsp:include page="layouts/user-menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/home">Home</a>
-                        <i>|</i>
-                    </li>
-                    <li>My Orders</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/app-header.jsp"/>
+<jsp:include page="layouts/app-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="My orders"/>
+<jsp:param name="subtitle" value="Track your purchases in one place."/>
+<jsp:param name="root" value="Home"/>
+<jsp:param name="rootUrl" value="/home"/>
+<jsp:param name="parent" value="My Pantrix"/>
+<jsp:param name="parentUrl" value="/customer/my-account"/>
+<jsp:param name="back" value="true"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
     <div class="privacy py-sm-5 py-4">
     <c:if test="${not empty cancelled}">
         <div class="alert alert-success alert-dismissible fade show text-center">
@@ -42,9 +35,9 @@
         </div>
 </c:if>
         <div class="container py-xl-4 py-lg-2">
-            <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">My Orders</h3>
+
             <div class="container">
-            <div class="table-responsive">
+            <c:if test="${empty orders}"><div class="empty-state"><i class="fas fa-box-open" aria-hidden="true"></i><h2>Your first order starts here</h2><p>Pick your pantry favourites and we will keep your orders here.</p><a class="btn btn-primary" href="${pageContext.request.contextPath}/product/all">Start shopping</a></div></c:if><div class="table-responsive">
 <table id="example" class="responsive-table table table-hover table-bordered text-center">
       <thead>
         <tr>
@@ -66,7 +59,7 @@
           <td data-label="SR. No."><div class="cell-value">${count}</div></td>
           <td data-label="Order No."><div class="cell-value">${orders.paymentId}</div></td>
           <td data-label="Item"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${orders.product.code}" target="_blank">
-          <img loading="lazy" alt="${orders.product.name}" src="${pageContext.request.contextPath}${orders.product.image}" width="70" height="90" class="product-image img img-responsiive" /></a>
+          <span class="image-tile compact-image-tile"><img loading="lazy" alt="${orders.product.name}" src="${pageContext.request.contextPath}${orders.product.image}" width="70" height="90" class="product-image img img-responsiive" /></span></a>
           <br>${orders.product.name}</div></td>
           <td data-label="Quantity"><div class="cell-value">${orders.quantity}</div></td>
           <td data-label="Price(&#x20b9;)"><div class="cell-value"><fmt:formatNumber value="${orders.price}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></div></td>
@@ -106,6 +99,7 @@
     <!-- //checkout page -->
     <div>
     </div>
+</main>
 <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
     <!-- Bootstrap core JavaScript-->
 <!-- Page level plugin JavaScript-->

@@ -33,22 +33,18 @@ table {
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page">
-    <jsp:include page="layouts/admin_menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li><a href="/admin/home">Home</a> <i>|</i></li>
-                    <li>View Customers</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="Customers"/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value=""/>
+<jsp:param name="parentUrl" value="/admin/home"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
     <!-- register -->
     <div class="contact py-sm-5 py-4">
     <c:if test="${not empty delete}">
@@ -58,7 +54,7 @@ table {
                 </div>
             </c:if>
         <div class="container-fluid py-xl-4 py-lg-2">
-<div class="admin-heading"><div><span class="eyebrow">Store administration</span><h2>Customers</h2><p>View and manage registered customer accounts.</p></div></div>
+
             <p id="mb">Slide Right to see full table.</p>
     <table id="example" class="responsive-table table table-hover table-bordered text-center">
                 <thead>
@@ -93,7 +89,8 @@ table {
             </table>
         </div>
     </div>
-    <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/cart-footer.jsp"></jsp:include>
     <!-- Bootstrap core JavaScript-->
 <!-- Page level plugin JavaScript-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>

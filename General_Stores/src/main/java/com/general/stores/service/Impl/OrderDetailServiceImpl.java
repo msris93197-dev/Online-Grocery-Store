@@ -86,10 +86,13 @@ public class OrderDetailServiceImpl implements OrderDetailService {
 		try {
 			MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 			String content = "Hi, <b>" + name + "</b> Thank you for your order. PFB Order Details.<br>";
-			helper.setSubject("Dharmesh General Store: Order#" + OrderNum);
+			helper.setSubject("Pantrix: Order#" + OrderNum);
 			helper.setText(content, true);
 			helper.setTo(email);
-			helper.addCc(env.getProperty("mailToCc"));
+			String mailToCc = env.getProperty("mailToCc");
+			if (mailToCc != null && !mailToCc.trim().isEmpty()) {
+				helper.addCc(mailToCc);
+			}
 			helper.setFrom(env.getProperty("spring.mail.username"));
 			String fileName = "order_"+OrderNum+".pdf";
 			helper.addAttachment(fileName, new ByteArrayResource(bytes));

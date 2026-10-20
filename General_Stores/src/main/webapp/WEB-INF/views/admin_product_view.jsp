@@ -34,26 +34,23 @@ table {
     <link href="${pageContext.request.contextPath}/css/theme.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="grocery-app admin-page">
-    <jsp:include page="layouts/admin_menu.jsp"></jsp:include>
-    <!-- banner-2 -->
-    <div class="page-head_agile_info_w3l"></div>
-    <!-- //banner-2 -->
-    <!-- page -->
-    <div class="services-breadcrumb">
-        <div class="agile_inner_breadcrumb">
-            <div class="container">
-                <ul class="w3_short">
-                    <li><a href="/admin/home">Home</a> <i>|</i></li>
-                    <li>View Products</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- //page -->
+<jsp:include page="layouts/admin-header.jsp"/>
+<jsp:include page="layouts/admin-sidebar.jsp"/>
+<main id="main-content" class="app-main" tabindex="-1">
+<jsp:include page="layouts/page-header.jsp">
+<jsp:param name="title" value="View products"/>
+<jsp:param name="subtitle" value="Manage your catalogue, pricing and product details."/>
+<jsp:param name="root" value="Admin"/>
+<jsp:param name="rootUrl" value="/admin/home"/>
+<jsp:param name="parent" value="Catalogue"/>
+<jsp:param name="parentUrl" value="/admin/product/view"/>
+<jsp:param name="back" value="false"/>
+<jsp:param name="step" value=""/>
+</jsp:include>
     <!-- register -->
     <div class="contact py-sm-5 py-4">
         <div class="container-fluid py-xl-4 py-lg-2">
-<div class="admin-heading"><div><span class="eyebrow">Store administration</span><h2>Products</h2><p>Manage your catalogue, pricing and product details.</p></div></div>
+
     <c:if test="${not empty delete}">
                 <div class="alert alert-success alert-dismissible fade show text-center">
                     Product removed successfully.
@@ -88,7 +85,7 @@ table {
                             <td data-label="SR. No."><div class="cell-value">${count}</div></td>
                             <td data-label="Name"><div class="cell-value">${product.name}</div></td>
                             <td data-label="Image"><div class="cell-value"><a href="${pageContext.request.contextPath}/product/productdetails?code=${product.code}" target="_blank">
-          <img loading="lazy" alt="${product.name}" src="${pageContext.request.contextPath}${product.image}" width="70" height="90" class="product-image img img-responsiive" /></a>
+          <span class="image-tile compact-image-tile"><img loading="lazy" alt="${product.name}" src="${pageContext.request.contextPath}${product.image}" width="70" height="90" class="product-image img img-responsiive" /></span></a>
          </div></td>
                             <td data-label="Description"><div class="cell-value">${product.description}</div></td>
                             <td data-label="MRP(&#x20b9;)"><div class="cell-value"><del><fmt:formatNumber value="${product.mrpPrice}" minFractionDigits="0" maxFractionDigits="2" groupingUsed="false" /></del></div></td>
@@ -105,7 +102,8 @@ table {
             </table>
         </div>
     </div>
-    <jsp:include page="layouts/cart-footer.jsp"></jsp:include>
+    </main>
+<jsp:include page="layouts/cart-footer.jsp"></jsp:include>
     <!-- Bootstrap core JavaScript-->
 <!-- Page level plugin JavaScript-->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
